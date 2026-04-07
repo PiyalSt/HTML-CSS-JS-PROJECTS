@@ -28,10 +28,13 @@ const luckFunction = () => {
     luckNumber --;
     luck.innerHTML = `Luck ${luckNumber}`;
 
-    if(luckNumber == 0) {
+    
+    if(luckNumber === 0) {
+        checkBtn.style.display = 'none'
         display.innerHTML = 'AI is winner!'
         display.style.color = 'green'
-        checkBtn.style.display = 'none'
+        console.log(display.innerHTML);
+        
     }
 }
 
