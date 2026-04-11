@@ -1,0 +1,14 @@
+/* google fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* tailwind import */
+@import "tailwindcss";
+
+/* color stores */
+@theme {
+    --color-background: #f2f3f8;
+}
+
+* {
+    font-family: "Saira Stencil", sans-serif;
+}

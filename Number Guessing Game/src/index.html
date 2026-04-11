@@ -1,45 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Guessing Game</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
-    
-    <div id="container" class="w-full h-screen bg-background flex flex-col items-center justify-center relative overflow-hidden">
-        <div class="bg-boxColor rounded-2xl p-8 m-8 font-press-star text-text flex flex-col justify-between gap-4">
-            <div class="flex flex-col gap-4 items-center lg:flex-row lg:w-200 lg:justify-between">
-                <button id="playAgain" class="text-sm py-2 px-4 bg-main text-white rounded cursor-pointer">Play Again</button>
-                <p class="text-sm">Between 1 - 20</p>
-                <p id="luck" class="text-sm"></p>
-            </div>
-            <div class="flex flex-col gap-4 items-center text-center ">
-                <h1 class="text-lg py-4 lg:text-2xl">
-                    Guessing You AI Number!
-                </h1>
-                <h4 id="aiNumberDisplay" class="py-2 px-4 bg-main text-white rounded "></h4>
-                <p id="display-all" class="text-green-800">Start Guessing</p>
-            </div>
-            <div class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center mt-6">
-                <div class="flex flex-col lg:justify-center lg:items-center">
-                    <input id="userNumber" class="border-2 border-main py-2 px-4 w-full text-sm" type="number" placeholder="00">
-                    <button id="checkBtn" class="py-2 px-4 bg-main text-white my-2 rounded cursor-pointer w-full">Check now</button>
-                </div>
-                <div class="flex flex-col text-center">
-                    <p id="score"></p>
-                    <p id="highScoreDisplay"></p>
-                </div>
-                <button id="newGame" class=" text-white bottom-10 right-10 py-2 px-6 bg-main rounded cursor-pointer lg:absolute">New Game</button>
-            </div>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div
+      id="container"
+      class="w-full h-screen bg-background flex flex-col items-center justify-center relative overflow-hidden"
+    >
+      <div
+        class="bg-boxColor rounded-2xl p-8 m-8 font-press-star text-text flex flex-col justify-between gap-4"
+      >
+        <div
+          class="flex flex-col gap-4 items-center lg:flex-row lg:w-200 lg:justify-between"
+        >
+          <button
+            id="playAgain"
+            class="text-sm py-2 px-4 bg-main text-white rounded cursor-pointer"
+          >
+            Play Again
+          </button>
+          <p class="text-sm">Between 1 - 20</p>
+          <p id="luck" class="text-sm"></p>
         </div>
-        
-
+        <div class="flex flex-col gap-4 items-center text-center">
+          <h1 class="text-lg py-4 lg:text-2xl">Guessing You AI Number!</h1>
+          <h4
+            id="aiNumberDisplay"
+            class="py-2 px-4 bg-main text-white rounded"
+          ></h4>
+          <p id="display-all" class="text-green-800">Start Guessing</p>
+        </div>
+        <div
+          class="flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-center mt-6"
+        >
+          <div class="flex flex-col lg:justify-center lg:items-center">
+            <input
+              id="userNumber"
+              class="border-2 border-main py-2 px-4 w-full text-sm"
+              type="number"
+              placeholder="00"
+            />
+            <button
+              id="checkBtn"
+              class="py-2 px-4 bg-main text-white my-2 rounded cursor-pointer w-full"
+            >
+              Check now
+            </button>
+          </div>
+          <div class="flex flex-col text-center">
+            <p id="score"></p>
+            <p id="highScoreDisplay"></p>
+          </div>
+          <button
+            id="newGame"
+            class="text-white bottom-10 right-10 py-2 px-6 bg-main rounded cursor-pointer lg:absolute"
+          >
+            New Game
+          </button>
+        </div>
+      </div>
     </div>
 
-
     <script src="js/script.js"></script>
-
-</body>
+  </body>
 </html>
