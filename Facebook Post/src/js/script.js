@@ -2,9 +2,8 @@
 const nickName = document.querySelector("#nickName");
 const publishBtn = document.querySelector("#publishBtn");
 const textArea = document.querySelector("#textArea");
-const showImg = document.querySelector("#showImg")
-// const showImg2 = document.querySelector("#showImg2")
-const imgFile = document.querySelector("#imgFile")
+const showImg = document.querySelector("#showImg");
+const imgFile = document.querySelector("#imgFile");
 
 // display - innerHTML
 const displayName = document.querySelector("#displayName");
@@ -17,15 +16,13 @@ const postCartContainer = document.querySelector("#postCartContainer");
 const postCart = [];
 
 // Delete Button
-const deleteBtn = document.querySelector('#deleteBtn')
-
+const deleteBtn = document.querySelector("#deleteBtn");
 
 const renderPosts = () => {
+  postCartContainer.innerHTML = "";
 
-    postCartContainer.innerHTML = "";
-
-    postCart.forEach((item, index) => {
-        postCartContainer.innerHTML += `
+  postCart.forEach((item, index) => {
+    postCartContainer.innerHTML += `
         <div id="postCart" class="mt-20 mb-10 border-t border-gray-300 pt-6">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4">
@@ -46,11 +43,15 @@ const renderPosts = () => {
 
             <div class="my-6 sm:my-6 lg:my-10 ml-15">
                 <div id="displayResults" class="text-2xl">${item.someText}</div>
-                ${item.image ? `
+                ${
+                  item.image
+                    ? `
                     <div class="w-full h-auto bg-gray-200 rounded-lg mt-2">
                         <img src="${item.image}" class="w-full h-auto object-cover  rounded-lg" />
                     </div>
-                    ` : ""}
+                    `
+                    : ""
+                }
             </div>
 
             <div class="flex flex-col gap-8 sm:flex-row sm:justify-between sm:items-center ">
@@ -73,63 +74,57 @@ const renderPosts = () => {
             </div>
         </div>
     `;
-    })
-
-}
-
-const deletePost = (index) => {
-    postCart.splice(index, 1)
-    renderPosts()
-}
-
-const likePost = (index) => {
-    postCart[index].likes++;
-    renderPosts()
-}
-
-const editPost = (index) => {
-
-    const newText = prompt("Edit your post: ")
-
-    if(newText) {
-        postCart[index].someText = newText
-        renderPosts()
-    }
-}
-
-imgFile.onchange = () => {
-    const file = imgFile.files[0];
-    if (file) {
-        imageURL = URL.createObjectURL(file);
-    }
-    showImg.src = URL.createObjectURL(imgFile.files[0])
+  });
 };
 
+const deletePost = (index) => {
+  postCart.splice(index, 1);
+  renderPosts();
+};
+
+const likePost = (index) => {
+  postCart[index].likes++;
+  renderPosts();
+};
+
+const editPost = (index) => {
+  const newText = prompt("Edit your post: ");
+
+  if (newText) {
+    postCart[index].someText = newText;
+    renderPosts();
+  }
+};
+
+imgFile.onchange = () => {
+  const file = imgFile.files[0];
+  if (file) {
+    imageURL = URL.createObjectURL(file);
+  }
+  showImg.src = URL.createObjectURL(imgFile.files[0]);
+};
 
 publishBtn.addEventListener("click", () => {
-
-    const newPost = {
-        nickName: nickName.value,
-        someText: textArea.value,
-        date : new Date().toLocaleString(),
-        likes : 0,
-        image: imageURL
-    }
-
-    postCart.unshift(newPost);
   
-    if(!nickName.value) {
-        alert("Enter Nick Name")
-        return;
-    } 
-    
-    if (!textArea.value) {
-        alert("Enter Some Text")
-        return;
-    }
-    
-    renderPosts()
+  if (!nickName.value) {
+    alert("Enter Nick Name");
+    return;
+  }
 
-    
+  if (!textArea.value) {
+    alert("Enter Some Text");
+    return;
+  }
 
+  const newPost = {
+    nickName: nickName.value,
+    someText: textArea.value,
+    date: new Date().toLocaleString(),
+    likes: 0,
+    image: imageURL,
+  };
+
+  postCart.unshift(newPost);
+
+  renderPosts();
 });
