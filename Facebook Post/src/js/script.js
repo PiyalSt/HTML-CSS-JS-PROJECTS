@@ -124,7 +124,7 @@ publishBtn.addEventListener("click", () => {
     image: imageURL,
   };
 
-  postCart.unshift(newPost);
+  postCart.push(newPost);
 
   renderPosts();
 });
