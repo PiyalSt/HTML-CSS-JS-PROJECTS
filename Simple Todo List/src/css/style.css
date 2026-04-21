@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 40px 0;
+    background: rgb(41, 41, 41);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainBox {
+    width: 70%;
+    /* height: 600px; */
+    background: rgb(26, 29, 31);
+    border-radius: 20px;
+    padding: 80px;
+    margin-top: 90px;
+}
+
+.userInput {
+    width: 100%;
+    /* height: 500px; */
+}
+
+.userInput h1 {
+    text-align: center;
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+}
+
+.inputForm {
+    margin-top: 20px;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 20px;
+}
+
+.nameSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.nameSection label {
+    font-size: 28px;
+}
+
+.captionSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.captionSection label {
+    font-size: 28px;
+}
+
+#userName {
+    /* width: ; */
+    padding: 18px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#userCaption {
+    padding: 18px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#postSection {
+    margin-top: 40px;
+}
+
+.postSection button {
+    padding: 16px 48px;
+    font-size: 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+
+#resultsSection {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.rltsCont{
+    width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: rgb(49, 50, 55);
+}
+
+.rltsCont h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.rltsInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 18px;
+    font-size: 20px;
+    /* padding: 8px 0; */
+}
+
+.info input {
+    width: 20px;
+    height: 20px;
+}
+
+.info p {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.updateBtn {
+    padding: 8px 18px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    background: rgb(44, 141, 214);
+    cursor: pointer;
+}
+
+.deleteBtn {
+    padding: 8px 18px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    background: rgb(210, 2, 2);
+    color: white;
+    cursor: pointer;
+}
