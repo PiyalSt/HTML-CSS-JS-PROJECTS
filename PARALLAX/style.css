@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    width: 100%;
+    color: white;
+    padding: 24px 100px;
+    position: absolute;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+}
+
+.logo p {
+    font-size: 40px;
+    text-shadow: 2px 4px 4px #000;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-shadow: 2px 6px 3px #000;
+    transition: all .3s ease-in;
+}
+
+.menu li a:hover {
+    color: #ccc;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 78px;
+    text-shadow: 2px 8px 5px #000;
+}
+
+.section p {
+    font-size: 28px;
+    text-shadow: 2px 8px 5px #000;
+}
+
+#section-one {
+    background-image: url(image/image-01.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section-two {
+    background-image: url(image/image-02.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section-three {
+    background-image: url(image/image-03.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section-four {
+    background-image: url(image/image-04.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#section-five {
+    background-image: url(image/image-05.jpg);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

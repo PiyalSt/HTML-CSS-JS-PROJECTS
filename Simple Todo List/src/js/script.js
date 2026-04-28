@@ -1,24 +1,17 @@
-
+// dom menipulation
 const postBtn = document.querySelector('.postBtn')
 const resultsSection = document.querySelector('#resultsSection')
 const userName = document.querySelector('#userName')
 const userCaption = document.querySelector('#userCaption')
 
-
 // todo array 
 const todoArray = []
-
-
-
-
 
 const render = () => {
 
     resultsSection.innerHTML = ''
 
     todoArray.forEach((item, index) => {
-
-        // resultsSection.innerHTML = ''
 
         resultsSection.innerHTML += `<div class="rltsCont">
                                         <h2>${item.userName}</h2>
@@ -29,26 +22,33 @@ const render = () => {
                                             </div>
                                                 
                                             <div class="btn">
-                                                <button onclick="deleteFunc(${index})" class="updateBtn">Update</button>
-                                                <button class="deleteBtn">Delete</button>
+                                                <button onclick="updateFunc(${index})" class="updateBtn">Update</button>
+                                                <button onclick="deleteFunc(${index})" class="deleteBtn">Delete</button>
                                             </div>
                                         </div>
                                     </div>`
 
     })
-
-
 }
 
 // function
-
 const deleteFunc = (index) => {
     todoArray.splice(index, 1)
+    
+    render()
+}
+
+const updateFunc = (index) => {
+    const update = prompt("Update your task")
+
+    if (update) {
+        todoArray[index].task = update;
+    }
 
     render()
 }
 
-
+// click function
 postBtn.addEventListener('click', () => {
 
     if(!userName.value) {
@@ -68,10 +68,5 @@ postBtn.addEventListener('click', () => {
         render()
         
     }
-    
-
-     
-
-    console.log('clicked');
      
 })
