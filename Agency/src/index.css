@@ -1,7 +1,20 @@
+/* Google Inter Fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* tailwindcss link */
 @import "tailwindcss";
 
-
+/* common css */
 #wrapper{
     width: 90%;
     margin: auto;
+}
+
+@theme {
+    --font-inter: "Inter", sans-serif;
+
+    --color-primary: #6A4DF4;
+    --color-secondary: #151515;
+
+    --color-textColor: #737373;
 }
